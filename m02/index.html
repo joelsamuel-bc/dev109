@@ -1,88 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weekly Meal Planner</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Meal Planner</title>
+    <style>
+      table {
+        border: 1px solid black;
+        width: 100%;
+      }
+      th, td {
+        padding: 10px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML Table Example</h1>
+    <table>
+      <tr>
+        <th colspan="4">Meal Prep for the Week</th>
+      </tr>
+      <tr>
+        <td rowspan="2">
+          <img src="https://i.pinimg.com/736x/2b/17/17/2b1717277f53677486c29809a99485db.jpg" alt="Food items doodle" width="300">
+        </td>
+        <td><h2>Meal Prep for the Week</h2></td>
+        <td colspan="2">
+          <h2>Recipe Index</h2>
+          <ul>
+            <li><a href="#chicken-rice">Chicken & Rice</a></li>
+            <li><a href="#egg-fried-rice">Egg Fried Rice</a></li>
+            <li><a href="#teriyaki-chicken">Teriyaki Chicken</a></li>
+            <li><a href="#toast-eggs">Toast & Eggs</a></li>
+            <li><a href="#fruits-day">Fruits Day</a></li>
+            <li><a href="#cheat-day">Ice Cream (Cheat Day)</a></li>
+            <li><a href="#mashed-potato">Mashed Potato</a></li>
+          </ul>
+        </td>
+      </tr>
 
-  <table border="1">
-    <tr>
-      <th colspan="4">HTML Table Example</th>
-    </tr>
+      <tr>
+        <th colspan="2">Week Starting</th>
+        <th>04/19/2025</th>
+      </tr>
 
-    <tr>
-      <td rowspan="2">
-        <img src="https://i.pinimg.com/736x/2b/17/17/2b1717277f53677486c29809a99485db.jpg" alt="Food items doodle" width="300">
-      </td>
-      <td><b>Meal Prep for the Week</b></td>
-      <td colspan="2"><b>Recipe Index</b>
-        <ul>
-          <li><a href="#chicken-rice">Chicken & Rice</a></li>
-          <li><a href="#egg-fried-rice">Egg Fried Rice</a></li>
-          <li><a href="#teriyaki-chicken">Teriyaki Chicken</a></li>
-          <li><a href="#toast-eggs">Toast & Eggs</a></li>
-          <li><a href="#fruits-day">Fruits Day</a></li>
-          <li><a href="#cheat-day">Ice Cream (Cheat Day)</a></li>
-          <li><a href="#mashed-potato">Mashed Potato</a></li>
-        </ul>
-      </td>
-    </tr>
+      <tr>
+        <th>Day of the Week</th>
+        <th>Recipe Name</th>
+        <th colspan="2">Instructions</th>
+      </tr>
 
-    <tr>
-      <th colspan="2">Week Starting</th>
-      <th>04/19/2025</th>
-    </tr>
+      <tr id="chicken-rice">
+        <td>Monday</td>
+        <td>Chicken & Rice</td>
+        <td colspan="2">Heat some olive oil in a pan, fry some chicken thighs/breast with spices of your choice, let it cook for a while, let it sit for a few minutes and serve with white rice.</td>
+      </tr>
 
-    <tr>
-      <th>Day of the Week</th>
-      <th>Recipe Name</th>
-      <th colspan="2"><b>Instructions</b></th>
-    </tr>
+      <tr id="egg-fried-rice">
+        <td>Tuesday</td>
+        <td>Egg Fried Rice</td>
+        <td colspan="2">Heat olive oil in a pan, add cut onions, spices, and scallions. Cook until golden brown, add 2 eggs and scramble. Then add rice and soy sauce, serve hot.</td>
+      </tr>
 
-    <tr id="chicken-rice">
-      <td>Monday</td>
-      <td>Chicken & Rice</td>
-      <td colspan="2">Heat olive oil, fry seasoned chicken, cook and serve with rice.</td>
-    </tr>
+      <tr id="teriyaki-chicken">
+        <td>Wednesday</td>
+        <td>Teriyaki Chicken</td>
+        <td colspan="2">Add sesame oil to a heated pan, cook chicken until brown. Remove and boil the sauce for 4–5 mins. Add chicken back in until cooked through and sticky. Garnish with sesame seeds.</td>
+      </tr>
 
-    <tr id="egg-fried-rice">
-      <td>Tuesday</td>
-      <td>Egg Fried Rice</td>
-      <td colspan="2">Fry onions, scramble eggs, add rice and soy sauce. Serve hot.</td>
-    </tr>
+      <tr id="toast-eggs">
+        <td>Thursday</td>
+        <td>Toast & Eggs</td>
+        <td colspan="2">Toast some bread. Add oil to a pan and prepare eggs to your liking.</td>
+      </tr>
 
-    <tr id="teriyaki-chicken">
-      <td>Wednesday</td>
-      <td>Teriyaki Chicken</td>
-      <td colspan="2">Cook chicken, boil teriyaki sauce, combine until sticky. Garnish.</td>
-    </tr>
+      <tr id="fruits-day">
+        <td>Friday</td>
+        <td>Fruits Day</td>
+        <td colspan="2">Cut fruits like apples, bananas, kiwis or any others you like and place them in a bowl.</td>
+      </tr>
 
-    <tr id="toast-eggs">
-      <td>Thursday</td>
-      <td>Toast & Eggs</td>
-      <td colspan="2">Toast bread, cook eggs your way. Serve warm.</td>
-    </tr>
+      <tr id="cheat-day">
+        <td>Saturday</td>
+        <td>Cheat Day, Ice Cream</td>
+        <td colspan="2">Some good old store-bought ice cream.</td>
+      </tr>
 
-    <tr id="fruits-day">
-      <td>Friday</td>
-      <td>Fruits Day</td>
-      <td colspan="2">Cut fruits like apples, bananas, kiwi, and mix in a bowl.</td>
-    </tr>
-
-    <tr id="cheat-day">
-      <td>Saturday</td>
-      <td>Ice Cream (Cheat Day)</td>
-      <td colspan="2">Enjoy your favorite store-bought ice cream!</td>
-    </tr>
-
-    <tr id="mashed-potato">
-      <td>Sunday</td>
-      <td>Mashed Potato</td>
-      <td colspan="2">Boil potatoes, mash with butter, milk, salt, and pepper.</td>
-    </tr>
-  </table>
-
-</body>
+      <tr id="mashed-potato">
+        <td>Sunday</td>
+        <td>Mashed Potato</td>
+        <td colspan="2">Boil potatoes, mash with butter, salt, pepper, and a little milk until creamy.</td>
+      </tr>
+    </table>
+  </body>
 </html>
