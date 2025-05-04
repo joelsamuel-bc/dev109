@@ -1,1 +1,63 @@
 
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-image: url('https://wallpapercave.com/wp/wp6011793.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#logo {
+  font-family: 'ComfortaaRegular', sans-serif;
+  font-size: 2.5em;
+  padding: 10px;
+  color: white;
+}
+
+nav {
+  background-color: #b5569c;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav li {
+  padding: 10px 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+#feature {
+  background-color: #89c540;
+  background-image: url("https://wallpapercave.com/wp/wp6011793.jpg");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+
+#col1 {
+  background-color: #e589a5;
+  padding: 20px;
+}
+#col2 {
+  background-color: #8a0037;
+  padding: 20px;
+}
+#col3 {
+  background-color: #d48787;
+  padding: 20px;
+}
+
+footer {
+  background-color: #b5569c;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
