@@ -1,110 +1,84 @@
 * {
-	font-family: 'Lil Grotesk', Arial, Verdana, sans-serif;
-	color: #665544;
-	text-align: center;
-	box-sizing: border-box; 
+    font-family: Arial, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	width: 100%;
-	margin: 0;
-	background-image: url("https://hdqwalls.com/download/firewatch-sd-3840x2160.jpg");
-	background-size: cover;
-	background-position: center;
-	padding-top: 60px; 
+    width: 90%;
+    margin: 0 auto;
+    background-image: url('https://hdqwalls.com/download/firewatch-sd-3840x2160.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-#header {
-	background-color: #fff;
-	padding: 20px 0;
-	position: fixed;
-	width: 100%;
-	top: 0;
-	left: 0;
-	z-index: 100;
-}
-
-h1 {
-	font-family: 'Lil Grotesk', Arial, Verdana, sans-serif;
-	margin: 0;
+#logo {
+    font-family: 'LilGroteskRegular', sans-serif;
+    font-size: 2.5em;
+    padding: 1em 0;
+    color: orange;
 }
 
 #nav {
-	background-color: #333;
-	padding: 10px 0;
+    background-color: #b7559b;
+    padding: 0.5em 0;
+    margin: 1%;
 }
 
-#nav ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+li {
+    display: inline;
+    padding: 0.5em;
 }
 
-#nav li {
-	display: inline;
-	padding: 0 15px;
-}
-
-#nav a {
-	color: white;
-	text-decoration: none;
-	font-size: 1.1em;
-}
-
-#content {
-	overflow: hidden;
-	margin-top: 80px; /* Adjusts for the fixed header */
+a {
+    color: white;
+    text-decoration: none;
 }
 
 #feature {
-	background-color: #8CC63E;
-	background-image: url("https://gameranx.com/wp-content/uploads/2016/03/Firewatch-4K-Wallpaper-2.jpg");
-	background-size: cover;
-	background-position: right;
-	background-repeat: no-repeat;
-	padding: 80px 20px;
-	color: white;
-}
-
-#feature p {
-	font-size: 2.5em;
-	margin: 0;
-}
-
-.article {
-	background-color: #efefef;
-	padding: 20px;
-	margin-bottom: 1em;
-	border-radius: 8px;
+    background-color: #8CC63E;
+    background-image: url('https://gameranx.com/wp-content/uploads/2016/03/Firewatch-4K-Wallpaper-2.jpg');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 10em;
+    margin: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .column1, .column2, .column3 {
-	width: 31%;
-	float: left;
-	margin: 1%;
-	text-align: left;
+    float: left;
+    width: 31.3%;
+    margin: 1%;
+    height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .column1 {
-	background-color: #f7f7f7;
+    background-color: #e988b7;
 }
 
 .column2 {
-	background-color: #d4d4d4;
+    background-color: #900038;
+    color: white;
 }
 
 .column3 {
-	background-color: #b1b1b1;
-	margin-right: 0;
+    background-color: #d18484;
+    margin-right: 0;
 }
 
 #footer {
-	background-color: #efefef;
-	padding: 20px 0;
-	clear: both;
-	text-align: center;
-}
-
-#footer p {
-	font-size: 1.2em;
+    clear: both;
+    background-color: #b7559b;
+    padding: 1em 0;
+    margin: 1%;
+    color: white;
 }
