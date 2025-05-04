@@ -1,10 +1,10 @@
+
 body {
   margin: 0;
   font-family: sans-serif;
-  background-image: url('https://wallpapercave.com/wp/wp6011793.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+
+  background: #add8e6 url('https://wallpapercave.com/wp/oa7KecF.jpg') no-repeat bottom center fixed;
+  background-size: contain;
 }
 
 #container {
@@ -24,7 +24,7 @@ nav {
   background-color: #b5569c;
 }
 nav ul {
-  list-style-type: none;
+  list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
@@ -37,13 +37,19 @@ nav a {
   text-decoration: none;
 }
 
+
 #feature {
-  background-color: #8CC63E;
+  background-color: #8CC63E; 
   background-image: url("https://wallpapercave.com/wp/wp6011793.jpg");
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
   height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  color: white;
 }
 
 #columns {
@@ -56,15 +62,19 @@ nav a {
   flex: 1;
   padding: 20px;
   margin: 0 10px;
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
 }
+
 #col1 {
-  background-color: #e589a5;
+  background-color: #ffc0cb;
 }
 #col2 {
-  background-color: #8a0037;
+  background-color: #800000;
 }
 #col3 {
-  background-color: #d48787;
+  background-color: #ffd1dc;
 }
 
 footer {
