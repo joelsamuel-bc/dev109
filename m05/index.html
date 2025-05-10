@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>M05 - Bullseye</title>
+</head>
+<body>
 
+  <div id="output"></div>
+
+  <script>
+    var number = prompt("Enter a number to see its multiplication table:");
+    number = parseInt(number);
+
+    var msg = '<h2>Multiplication Table</h2>';
+
+    if (!isNaN(number)) {
+      for (var i = 1; i <= 10; i++) {
+        msg += number + ' x ' + i + ' = ' + (number * i) + '<br>';
+      }
+    } else {
+      msg = "<p>Please refresh and enter a valid number.</p>";
+    }
+
+    document.getElementById('output').innerHTML = msg;
+
+    </script>
+
+</body>
+</html>
