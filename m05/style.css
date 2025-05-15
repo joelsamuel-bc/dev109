@@ -1,35 +1,41 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background: url('https://i.pinimg.com/originals/86/bf/f8/86bff8d975bf29ee90cdd6fab518d4be.jpg') no-repeat center center fixed;
-  background-size: cover;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+  font-family: 'Rock Salt', cursive;
+  background: #f5c04e;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 img {
+  width: 300px;
+  margin: 20px 0 10px;
+}
+
+.tagline {
+  font-family: sans-serif;
+  font-size: 1.2em;
+  color: #333;
+}
+
+#blackboard {
+  background: #3a5a40;
+  border: 10px solid #5e3c0a;
+  border-radius: 20px;
+  color: white;
+  padding: 30px;
+  max-width: 600px;
+  margin: 30px auto;
+  position: relative;
 }
 
 #output {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
-  max-width: 600px;
-  width: 100%;
-  margin: 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 1.5em;
+  line-height: 1.8em;
 }
 
-#output h2 {
-  color: #FFCC00;
-  font-size: 2rem;
-  margin-bottom: 20px;
+#teacher {
+  width: 150px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
-
-#output p {
-  color: #FF6347;
-  font-size: 1.3rem;
-}
-
