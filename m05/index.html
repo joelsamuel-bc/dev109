@@ -3,37 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>M05 - Bullseye</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <h1>
+      <img src="https://javascriptbook.com/code/c04/images/bullseye-logo.png" alt="Bullseye">
+    </h1>
+    <p class="tagline">Target Practice for Your Mind</p>
+  </header>
 
-  <div id="output"></div>
+  <section id="blackboard">
+    <div id="output"></div>
+
+    <img src="https://javascriptbook.com/code/c04/images/teacher.png" alt="teacher" id="teacher">
+  </section>
 
   <script>
-    var number = prompt("Enter a number to see its multiplication table:");
-
+    var number = prompt('Enter a number from 0 to 10 to see its multiplication table:');
     number = parseInt(number);
+
+    if (isNaN(number) || number < 0 || number > 10) {
+      number = 0;
+    }
 
     var msg = '<h2>Multiplication Table</h2>';
 
-    if (!isNaN(number)) {
-      for (var i = 1; i <= 10; i++) {
-        msg += number + ' × ' + i + ' = ' + (number * i) + '<br>';
-      }
-    } else {
-      msg = '<p>Please refresh and enter a valid number.</p>';
+    for (var i = 1; i < 10; i++) {
+      msg += i + ' x ' + number + ' = ' + (i * number) + '<br>';
     }
 
     document.getElementById('output').innerHTML = msg;
-       // --- Removed unused Bullseye game code ---
-    /*
-    <section id="page2">
-      <h1>Bullseye</h1>
-      <img src="images/teacher.png" id="teacher2" alt="">
-      <section id="blackboard">...</section>
-    </section>
-    <script src="js/example.js">
-    */
-  </script>
 
+
+  </script>
 </body>
 </html>
