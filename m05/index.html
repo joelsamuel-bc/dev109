@@ -13,28 +13,33 @@
     <p class="tagline">Target Practice for Your Mind</p>
   </header>
 
-<div id="blackboard">
-  <div id="output"></div>
-  <img src="https://javascriptbook.com/code/c04/images/teacher.png" alt="teacher" id="teacher">
-</div>
+  <div id="blackboard">
+    <div id="output"></div>
+    <img src="https://javascriptbook.com/code/c04/images/teacher.png" alt="teacher" id="teacher">
+  </div>
 
   <script>
+    // Asks the user for a number between 0 and 10
     var number = prompt('Enter a number from 0 to 10 to see its multiplication table:');
+
+    // Converts the input to an integer
     number = parseInt(number);
 
+    // If input is invalid, sets number to 0
     if (isNaN(number) || number < 0 || number > 10) {
       number = 0;
     }
 
+    // Create the heading for the multiplication table
     var msg = '<h2>Multiplication Table</h2>';
 
-    for (var i = 1; i < 10; i++) {
+    // Generate each line from table
+    for (var i = 1; i <= 10; i++) {
       msg += i + ' x ' + number + ' = ' + (i * number) + '<br>';
     }
 
+    // Display the table 
     document.getElementById('output').innerHTML = msg;
-
-
   </script>
 </body>
 </html>
