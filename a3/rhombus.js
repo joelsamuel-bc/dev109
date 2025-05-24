@@ -12,10 +12,10 @@ document.getElementById('rhombusForm').addEventListener('submit', function(e) {
   let result = "";
 
   for (let i = 1; i <= height; i++) {
-    result += createLine(i, height, symbol, color1, color2) + "\n";
+    result += createLine(i, height, symbol, color1, color2) + "<br>";
   }
-  for (let i = height; i >= 1; i--) {
-    result += createLine(i, height, symbol, color1, color2) + "\n";
+  for (let i = height - 1; i >= 1; i--) {
+    result += createLine(i, height, symbol, color1, color2) + "<br>";
   }
 
   outputDiv.innerHTML = result;
@@ -23,10 +23,9 @@ document.getElementById('rhombusForm').addEventListener('submit', function(e) {
 
 function createLine(count, height, symbol, color1, color2) {
   let line = "&nbsp;".repeat(height - count);
-  for (let j = 1; j <= count; j++) {
+  for (let j = 1; j <= (2 * count - 1); j++) {
     let color = (j % 2 === 0) ? color2 : color1;
     line += `<span style="color:${color}">${symbol}</span>`;
   }
   return line;
 }
-
