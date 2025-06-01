@@ -22,4 +22,18 @@ h1 {
   margin: 0;
 }
 
-/* ... keep the rest of the CSS unchanged ... */
+h2 {
+  font-weight: normal;
+  font-size: 1.4em;
+  margin-top: 0;
+  color: #666;
+}
+
+#info {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
