@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Contact Us</h1>
+
+  <form action="thankyou.html" onsubmit="return validateForm();">
+    <label>First Name:
+      <input type="text" id="firstname" />
+      <div class="error" id="firstnameError"></div>
+    </label><br/>
+
+    <label>Last Name:
+      <input type="text" id="lastname" />
+      <div class="error" id="lastnameError"></div>
+    </label><br/>
+
+    <label>Email:
+      <input type="text" id="email" />
+      <div class="error" id="emailError"></div>
+    </label><br/>
+
+    <label>Phone:
+      <input type="text" id="phone" />
+      <div class="error" id="phoneError"></div>
+    </label><br/>
+
+    <label>Username:
+      <input type="text" id="username" />
+      <div class="error" id="usernameError"></div>
+    </label><br/>
+
+    <label>Password:
+      <input type="password" id="password" />
+      <div class="error" id="passwordError"></div>
+    </label><br/>
+
+    <label>Address:
+      <input type="text" id="address" />
+      <div class="error" id="addressError"></div>
+    </label><br/>
+
+    <label>City:
+      <input type="text" id="city" />
+      <div class="error" id="cityError"></div>
+    </label><br/>
+
+    <label>State:
+      <select id="state">
+        <option value="">Select</option>
+        <option value="CA">California</option>
+        <option value="CA">Washington</option>
+        <option value="CA">Florida</option>
+      </select>
+      <div class="error" id="stateError"></div>
+    </label><br/>
+
+    <label>Country:
+      <select id="country">
+        <option value="">Select</option>
+        <option value="USA">United States</option>
+        <option value="CAN">Canada</option>
+        <!-- Add more countries -->
+      </select>
+      <div class="error" id="countryError"></div>
+    </label><br/>
+
+    <label>Zip Code:
+      <input type="text" id="zipcode" />
+      <div class="error" id="zipcodeError"></div>
+    </label><br/>
+
+    <label>Comments:
+      <textarea id="comments"></textarea>
+    </label><br/>
+
+    <div id="errorMessages"></div> 
+
+    <input type="submit" value="Submit" />
+  </form>
+
+  <script src="validate.js"></script>
+</body>
+</html>
 
