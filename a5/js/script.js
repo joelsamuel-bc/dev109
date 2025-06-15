@@ -1,9 +1,9 @@
 const images = [
-  { src: 'images/m08-hotel.jpg', alt: 'Img 1 Desc', desc: 'Test.' },
-  { src: 'images/img2.jpg', alt: 'Img 2 Desc', desc: '.' },
-  { src: 'images/img3.jpg', alt: 'Img 3 Desc', desc: '.' },
-  { src: 'images/img4.jpg', alt: 'Img 4 Desc', desc: '.' },
-  { src: 'images/img5.jpg', alt: 'Img 5 Desc', desc: '.' }
+  { src: 'images/cat1.jpg', alt: 'Cat drinking tea', desc: 'Cat 1: A cat enjoying its tea.' },
+  { src: 'images/cat2.jpg', alt: 'Cat driving a scooter', desc: 'Cat 2: A cat preparing to ride a scooter!' },
+  { src: 'images/cat3.jpg', alt: 'Cat playing CS:GO', desc: 'Cat 3: Gamer cat.' },
+  { src: 'images/cat4.jpg', alt: 'Working cat', desc: 'Cat 4: A cat working on its laptop.' },
+  { src: 'images/cat5.jpg', alt: 'Prison cat', desc: 'Cat 5: A cat locked up in prison.' }
 ];
 
 let currentIndex = 0;
@@ -16,9 +16,14 @@ const timerDisplay = document.getElementById('timer');
 
 function updateSlide() {
   const current = images[currentIndex];
-  slide.src = current.src;
-  slide.alt = current.alt;
-  desc.textContent = current.desc;
+  slide.classList.remove('visible');
+
+  setTimeout(() => {
+    slide.src = current.src;
+    slide.alt = current.alt;
+    desc.textContent = current.desc;
+    slide.classList.add('visible');
+  }, 100); // Slight delay for smoother fade
 }
 
 function showNext() {
@@ -39,10 +44,10 @@ function resetTimer() {
   timerDisplay.textContent = countdown;
   timer = setInterval(() => {
     countdown--;
+    timerDisplay.textContent = countdown;
     if (countdown === 0) {
       showNext();
     }
-    timerDisplay.textContent = countdown;
   }, 1000);
 }
 
@@ -50,6 +55,6 @@ document.getElementById('nextBtn').addEventListener('click', showNext);
 document.getElementById('prevBtn').addEventListener('click', showPrev);
 
 // Initialize
+slide.classList.add('visible');
 updateSlide();
 resetTimer();
-
