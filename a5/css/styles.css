@@ -1,1 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#carousel-container {
+  max-width: 600px;
+  margin: 50px auto;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#description {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+#controls {
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#timer {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #eee;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+#validators {
+  margin-top: 30px;
+}
+
+#validators img {
+  width: 80px;
+  margin: 0 10px;
+}
 
