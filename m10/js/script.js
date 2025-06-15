@@ -1,34 +1,30 @@
-const clearBtn = document.getElementById('clearBtn');
-const colorPicker = document.getElementById('colorPicker');
-const sizePicker = document.getElementById('sizePicker');
-const controls = document.getElementById('controls');
+var mybutton = document.querySelector("button");
 
-clearBtn.addEventListener('click', function(event) {
-  document.querySelectorAll('.dot').forEach(dot => dot.remove());
-  // Avoid dot on clear button
+mybutton.addEventListener("click", function(event) {
+  // Remove all dots 
+  var elements = document.getElementsByClassName("dot");
+  for (var i = elements.length - 1; i >= 0; i--) {
+      elements[i].parentNode.removeChild(elements[i]);
+  }
+
+  // Stop propagation to avoid adding a dot when clicking Clear
   event.stopPropagation();
 });
 
-document.addEventListener('click', function(event) {
-  // Avoid dot in control section
-  if (controls.contains(event.target)) {
-    return;
-  }
+document.addEventListener("click", function(event) {
+  var dot = document.createElement("div");
+  dot.className = "dot";
 
-  const dot = document.createElement('div');
-  dot.className = 'dot';
+  // Set dot styles
+  dot.style.width = '8px';
+  dot.style.height = '8px';
+  dot.style.position = "absolute";
+  dot.style.borderRadius = "50%";
+  dot.style.backgroundColor = "blue";
 
-  // Get size & color values
-  const size = parseInt(sizePicker.value, 10) || 8;
-  const color = colorPicker.value || '#0000ff';
-
-  dot.style.height = size + 'px';
-  dot.style.width = size + 'px';
-  dot.style.background = color;
-
-  // Calculate position 
-  dot.style.left = (event.pageX - size / 2) + 'px';
-  dot.style.top = (event.pageY - size / 2) + 'px';
+  // Position dot 
+  dot.style.left = (event.pageX - 4) + "px";
+  dot.style.top = (event.pageY - 4) + "px";
 
   document.body.appendChild(dot);
 });
