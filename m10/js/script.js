@@ -1,38 +1,34 @@
 const clearBtn = document.getElementById('clearBtn');
 const colorPicker = document.getElementById('colorPicker');
 const sizePicker = document.getElementById('sizePicker');
+const controls = document.getElementById('controls');
 
-// Clear all dots on button click
 clearBtn.addEventListener('click', function(event) {
-  const dots = document.querySelectorAll('.dot');
-  dots.forEach(dot => dot.remove());
-
-  // Stop the click event from appearing in body
+  document.querySelectorAll('.dot').forEach(dot => dot.remove());
+  // Avoid dot on clear button
   event.stopPropagation();
 });
 
-// Add dot on body click
-document.body.addEventListener('click', function(event) {
-  // Avoid dots within click region
-  if (event.target.closest('#controls')) {
+document.addEventListener('click', function(event) {
+  // Avoid dot in control section
+  if (controls.contains(event.target)) {
     return;
   }
 
   const dot = document.createElement('div');
   dot.className = 'dot';
 
-  // Get chosen size and color
-  const size = parseInt(sizePicker.value, 10);
-  const color = colorPicker.value;
+  // Get size & color values
+  const size = parseInt(sizePicker.value, 10) || 8;
+  const color = colorPicker.value || '#0000ff';
 
   dot.style.height = size + 'px';
   dot.style.width = size + 'px';
   dot.style.background = color;
 
-  // Position dot centered on click
+  // Calculate position 
   dot.style.left = (event.pageX - size / 2) + 'px';
   dot.style.top = (event.pageY - size / 2) + 'px';
 
   document.body.appendChild(dot);
 });
-
